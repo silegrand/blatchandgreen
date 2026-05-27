@@ -1,289 +1,154 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About Us | Blatch &amp; Green</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Libre+Caslon+Text:wght@400;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "background": "#f8f9fa",
-                        "tertiary-fixed": "#d8e3fa",
-                        "on-primary-fixed-variant": "#454749",
-                        "inverse-primary": "#c6c6c9",
-                        "tertiary-container": "#111c2d",
-                        "on-surface": "#191c1d",
-                        "on-secondary": "#ffffff",
-                        "on-tertiary-fixed-variant": "#3c475a",
-                        "surface-bright": "#f8f9fa",
-                        "surface-container-low": "#f3f4f5",
-                        "surface-container-highest": "#e1e3e4",
-                        "secondary-container": "#fed65b",
-                        "primary-fixed-dim": "#c6c6c9",
-                        "inverse-on-surface": "#f0f1f2",
-                        "on-error": "#ffffff",
-                        "on-background": "#191c1d",
-                        "tertiary-fixed-dim": "#bcc7dd",
-                        "on-secondary-container": "#745c00",
-                        "on-secondary-fixed": "#241a00",
-                        "on-primary-container": "#838486",
-                        "primary-container": "#1a1c1e",
-                        "error-container": "#ffdad6",
-                        "surface-container-high": "#e7e8e9",
-                        "error": "#ba1a1a",
-                        "secondary-fixed-dim": "#e9c349",
-                        "on-surface-variant": "#44474a",
-                        "primary-fixed": "#e2e2e5",
-                        "secondary": "#735c00",
-                        "on-secondary-fixed-variant": "#574500",
-                        "on-primary-fixed": "#1a1c1e",
-                        "surface-variant": "#e1e3e4",
-                        "tertiary": "#000001",
-                        "surface-container": "#edeeef",
-                        "on-error-container": "#93000a",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-fixed": "#ffe088",
-                        "outline-variant": "#c5c6ca",
-                        "inverse-surface": "#2e3132",
-                        "outline": "#75777a",
-                        "on-tertiary-fixed": "#111c2c",
-                        "on-primary": "#ffffff",
-                        "primary": "#000101",
-                        "surface": "#f8f9fa",
-                        "on-tertiary-container": "#798499",
-                        "surface-tint": "#5d5e61",
-                        "surface-dim": "#d9dadb"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-desktop": "80px",
-                        "stack-unit": "8px",
-                        "gutter": "32px",
-                        "margin-mobile": "24px",
-                        "container-max": "1440px"
-                    },
-                    "fontFamily": {
-                        "display-lg-mobile": ["Libre Caslon Text"],
-                        "label-caps": ["Hanken Grotesk"],
-                        "headline-sm": ["Libre Caslon Text"],
-                        "body-lg": ["Hanken Grotesk"],
-                        "display-lg": ["Libre Caslon Text"],
-                        "body-md": ["Hanken Grotesk"],
-                        "headline-md": ["Libre Caslon Text"]
-                    },
-                    "fontSize": {
-                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
-                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
-                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "400" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "400" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        /* Ken Burns effect base */
-        .img-zoom-hover {
-            transition: transform 10s ease;
-        }
-        .img-container:hover .img-zoom-hover {
-            transform: scale(1.05);
-        }
-    </style>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heritage | Blatch &amp; Green</title>
+<meta name="description" content="Blatch &amp; Green — Bespoke luxury construction and architectural execution in London and the South East.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bg.css">
 </head>
-<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container">
-<!-- TopNavBar -->
-<nav class="sticky top-0 z-50 bg-surface dark:bg-surface border-b border-outline/10 w-full transition-all duration-300">
-<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-24 max-w-container-max mx-auto">
-<a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg uppercase tracking-tight text-primary dark:text-inverse-primary leading-none" href="#">Blatch &amp; Green</a>
-<ul class="hidden md:flex space-x-gutter h-full items-center font-body-md text-body-md tracking-wider">
-<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors duration-300" href="#">Portfolio</a></li>
-<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors duration-300" href="#">Services</a></li>
-<li class="h-full flex items-center relative border-b-2 border-secondary top-[1px]">
-<a class="text-primary dark:text-inverse-primary font-semibold hover:text-secondary transition-colors duration-300" href="#">Heritage</a>
-</li>
-<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors duration-300" href="#">Process</a></li>
-<li class="h-full flex items-center"><a class="text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors duration-300" href="#">Contact</a></li>
-</ul>
-<button class="hidden md:block bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 uppercase tracking-[0.15em] hover:bg-secondary hover:text-on-secondary-container transition-colors duration-300 rounded-none border border-primary hover:border-secondary">
-                Inquire
-            </button>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
+<body>
+<!-- Mobile nav -->
+<div class="mob-nav" id="mobNav">
+  <div class="mob-nav-head">
+    <a href="index.html" class="mob-nav-brand">Blatch &amp; Green</a>
+    <button class="mob-close" id="mobClose" aria-label="Close menu">&times;</button>
+  </div>
+  <div class="mob-links">
+    <a href="portfolio.html">Portfolio</a>
+<a href="services.html">Services</a>
+<a href="heritage.html">Heritage</a>
+<a href="process.html">Process</a>
+<a href="contact.html">Contact</a>
+
+    <a href="contact.html" class="btn btn-ghost-dark mob-cta" style="margin-top:32px;width:fit-content">Inquire</a>
+  </div>
 </div>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container">
+    <a href="index.html" class="nav-brand">Blatch &amp; Green</a>
+    <div class="nav-links">
+      <a href="portfolio.html">Portfolio</a>
+<a href="services.html">Services</a>
+<a href="heritage.html" class="active">Heritage</a>
+<a href="process.html">Process</a>
+<a href="contact.html">Contact</a>
+
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-primary">Inquire</a>
+      <button class="nav-ham" id="navHam" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
 </nav>
-<!-- Header / Hero Section -->
-<header class="w-full pt-24 md:pt-32 pb-16 md:pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative bg-surface">
-<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary max-w-5xl leading-tight">Quiet confidence. Surgical precision. 42 years of architectural excellence.</h1>
-<div class="mt-12 flex flex-col md:flex-row gap-8 md:gap-gutter items-start md:items-end justify-between border-t border-outline/10 pt-8">
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">We cultivate lifelong relationships through uncompromising craftsmanship and bespoke design solutions for the most discerning clients. Our heritage is built on substance over flash.</p>
-<div class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.1em] flex items-center gap-2">
-<span class="w-2 h-2 bg-secondary block"></span>
-                Est. 1982
-            </div>
+
+<main>
+<div class="page-hero bg-lowest">
+  <div class="container grid-2" style="gap:80px;align-items:center;">
+    <div>
+      <div class="sec-label">Est. 1982</div>
+      <h1 class="t-display c-primary" style="margin-bottom:32px;">Four Decades.<br>One Standard.</h1>
+      <p class="t-body-lg c-on-surf-var" style="margin-bottom:24px;">Blatch &amp; Green was founded in 1982 by Edward Blatch and James Green, two site managers who left a national contractor with a shared conviction: that private residential construction deserved the same rigour as the most demanding commercial projects.</p>
+      <p class="t-body c-on-surf-var">Their first commission was a Victorian townhouse restoration in Kensington. It took eighteen months. The client recommended them to three others before it was finished. That pattern — work so good it requires no advertising — has defined the firm ever since.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
+      <div><div class="stat-number">1982</div><div class="stat-label">Founded</div></div>
+      <div><div class="stat-number">42+</div><div class="stat-label">Years Trading</div></div>
+      <div><div class="stat-number">150</div><div class="stat-label">Residences</div></div>
+      <div><div class="stat-number">3</div><div class="stat-label">Generations</div></div>
+    </div>
+  </div>
 </div>
-</header>
-<!-- Full Bleed Hero Imagery -->
-<div class="w-full h-[512px] md:h-[716px] bg-surface-container overflow-hidden img-container">
-<div class="w-full h-full bg-cover bg-center img-zoom-hover" data-alt="A sweeping, high-end monochrome architectural photograph of a luxury minimalist residential interior. The space features soaring ceilings, raw concrete textures juxtaposed with refined timber paneling, and expansive floor-to-ceiling windows letting in soft, diffused natural light. The aesthetic is strictly modern corporate and minimalist, utilizing a muted palette of greys, crisp whites, and deep charcoal shadows to evoke quiet confidence and heritage." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDNx9Jvozmiv2aJ6m_FASFX6TfqXgRt7hcn4sWymgByvT6SfT306zHgpy6E8MXk6hE1_COMe2FCoutcXmDBHYMsSrRqrXn2G1zBS0BgeBaNpAY01yhaDQcjnmrwNBWbdyvmvUs0Nn0jvAUOa8u-_NcdbrmfGcMWJak96gHxEedC1dU04ZJapESXTWFiXhLXcbUaxlIkMo0LIja-VZxCmRW5PM0NnnGoMUg6wV-9Op_cadQD6HoaIM6P0y-IiAJ5dhHUhgB81KLjzI')">
+
+<section class="sec bg-surface">
+  <div class="container">
+    <div class="sec-label">Milestones</div>
+    <div class="tl-row">
+  <div class="tl-year">1982</div>
+  <div><h3 class="t-headline-sm c-primary" style="margin-bottom:12px;">Foundation</h3><p class="t-body c-on-surf-var">Edward Blatch and James Green establish the firm from a shared office in Guildford. First commission: a Grade II listed townhouse restoration in Kensington, W8.</p></div>
 </div>
+    <div class="tl-row">
+  <div class="tl-year">1991</div>
+  <div><h3 class="t-headline-sm c-primary" style="margin-bottom:12px;">Surrey Studio Opens</h3><p class="t-body c-on-surf-var">Growing demand from country house clients leads to the opening of a second studio dedicated to projects in Surrey, Sussex and the wider South East.</p></div>
 </div>
-<!-- Our Story (Heritage & Stats) -->
-<section class="py-[80px] md:py-[120px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-b border-outline/10 bg-surface">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-gutter">
-<div class="md:col-span-4">
-<h2 class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.1em] mb-6">Our Story</h2>
-<h3 class="font-headline-md text-headline-md text-primary pr-8">A legacy built on precision and unwavering trust.</h3>
+    <div class="tl-row">
+  <div class="tl-year">2004</div>
+  <div><h3 class="t-headline-sm c-primary" style="margin-bottom:12px;">Second Generation</h3><p class="t-body c-on-surf-var">Tom Blatch and Sarah Green join the board, bringing architectural and engineering credentials. The firm undertakes its first net-zero new build.</p></div>
 </div>
-<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 pt-2">
-<div class="border-t border-outline/10 pt-6">
-<div class="font-display-lg text-display-lg text-primary mb-2">42</div>
-<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Years of Heritage</div>
-<p class="font-body-md text-body-md mt-6 text-on-surface-variant">Founded on principles of exacting standards, our firm has navigated over four decades of architectural evolution without ever compromising our core tenets of minimalist luxury and rigorous structural integrity.</p>
+    <div class="tl-row">
+  <div class="tl-year">2016</div>
+  <div><h3 class="t-headline-sm c-primary" style="margin-bottom:12px;">Craftsmanship Charter</h3><p class="t-body c-on-surf-var">The firm formalises its quality standards in the Blatch &amp; Green Craftsmanship Charter — a binding internal document governing material selection, tolerance levels and handover criteria for every commission.</p></div>
 </div>
-<div class="border-t border-outline/10 pt-6">
-<div class="font-display-lg text-display-lg text-primary mb-2">150+</div>
-<div class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Bespoke Commissions</div>
-<p class="font-body-md text-body-md mt-6 text-on-surface-variant">Each project is a testament to our commitment to seamless execution, resulting in a portfolio of unrivaled quality across the UK's most prestigious postcodes and rural estates.</p>
+    <div class="tl-row">
+  <div class="tl-year">Today</div>
+  <div><h3 class="t-headline-sm c-primary" style="margin-bottom:12px;">Forty Years On</h3><p class="t-body c-on-surf-var">Blatch &amp; Green remains privately held, client-referred and deliberately selective. A limited number of commissions, each receiving the full attention of the firm's leadership.</p></div>
 </div>
-</div>
-</div>
+  </div>
 </section>
-<!-- Our Philosophy (Bento Grid) -->
-<section class="py-[80px] md:py-[120px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-surface-bright">
-<div class="mb-12 md:mb-20 flex flex-col md:flex-row md:items-end justify-between gap-8">
-<div class="max-w-3xl">
-<h2 class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.1em] mb-6">Our Philosophy</h2>
-<h3 class="font-headline-md text-headline-md text-primary">Cultivating lifelong relationships through rigorous design and a profoundly transparent process.</h3>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-gutter min-h-[600px]">
-<!-- Large Image Tile -->
-<div class="md:col-span-7 bg-surface-container-highest p-8 md:p-12 relative overflow-hidden group flex flex-col justify-end min-h-[400px] border border-outline/10">
-<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:opacity-80 transition-opacity duration-700 mix-blend-multiply grayscale" data-alt="Close-up detail shot of bespoke architectural craftsmanship. Focus on the intersection of warm brushed brass hardware and deeply grained, dark-stained oak cabinetry in a luxury residential setting. The lighting is dramatic and raking, highlighting the textures and precise tolerances of the joinery. The overall mood is sophisticated, authoritative, and deeply rooted in modern minimalist luxury." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJ9PRbXYYR5Hv6dlEGoqnnXb42VkbTBtxo-KmwKAG_0KhZfm6uPnbl-Px353WTOwv7QACG5p8-TJ_QNMLfTPqqCYm9ueAlEtqlW6jGfC6X9aSZT4pNCnmMzt4SjH5NKyoefLmbWNQgKcMseQFP3der9ntPb5r0LtuWhmyAtBkcJH2-ZNGjv4UuvyEF6NT5GKYU2FDc30O2pnqFOYafTDqdYewqpI0LSY4jGvIcajjjyKgNLMmq6PIhZ0AGtQ2eadGDj9XC6YaYEdk')">
-</div>
-<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
-<div class="relative z-10 text-on-primary">
-<span class="material-symbols-outlined text-secondary text-3xl mb-4" data-weight="fill">diamond</span>
-<h4 class="font-headline-sm text-headline-sm mb-4">Substance over Flash</h4>
-<p class="font-body-md text-body-md text-inverse-primary max-w-md">We reject transient trends in favor of enduring materiality. Our architecture is designed to gracefully weather the passage of time, serving generations.</p>
-</div>
-</div>
-<!-- Side Tiles -->
-<div class="md:col-span-5 grid grid-rows-2 gap-4 md:gap-gutter">
-<div class="bg-surface p-8 md:p-10 border border-outline/10 flex flex-col justify-center group hover:bg-surface-container-low transition-colors duration-500">
-<span class="material-symbols-outlined text-secondary text-4xl mb-6 transition-transform duration-500 group-hover:-translate-y-2">handshake</span>
-<h4 class="font-headline-sm text-headline-sm text-primary mb-3">Relational Focus</h4>
-<p class="font-body-md text-body-md text-on-surface-variant">Our success is not measured in square footage, but by the enduring nature of our client partnerships and architectural collaborations.</p>
-</div>
-<div class="bg-primary p-8 md:p-10 flex flex-col justify-center text-on-primary relative overflow-hidden">
-<div class="absolute -right-12 -bottom-12 opacity-5 pointer-events-none">
-<span class="material-symbols-outlined text-[200px]">architecture</span>
-</div>
-<span class="material-symbols-outlined text-secondary text-4xl mb-6 relative z-10">architecture</span>
-<h4 class="font-headline-sm text-headline-sm text-on-primary mb-3 relative z-10">Surgical Precision</h4>
-<p class="font-body-md text-body-md text-inverse-primary relative z-10">From initial feasibility studies to final handover, every detail is engineered for perfection. We leave nothing to chance.</p>
-</div>
-</div>
-</div>
+
+<section class="sec bg-surf-low">
+  <div class="container">
+    <div class="sec-label">Leadership</div>
+    <h2 class="t-headline-md c-primary" style="margin-bottom:56px;max-width:440px;">The people who carry the standard.</h2>
+    <div class="team-grid">
+      <div>
+        <div class="img-wrap" style="aspect-ratio:3/4;margin-bottom:24px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpir647exyf_tojvA2yy5aMstvVYTvxD2EtwGDbZzLM0ZrwONCghOMZQJgEwDY-2tW3xDY9Ol4SN4T9kRrMum0Q-w_p13oYM2dZA-xuEwSM3xXjS3kzrLRB89BrJy5HWqzh5xnP6LZEyGzYlWtrYa6aAQK8l43N2U2KAH1nyNycvpMNFZO1W5DydV0iFSHwoXNVNcEKlSwSr8wfzECP30d52o46dBpRkn2eLX0tcTu1yAswnikrdojJf4mE4dsHlBz9AI2mCrSAuc" alt="Tom Blatch"></div>
+        <div class="team-card-role">Managing Director</div>
+        <h3 class="t-headline-sm c-primary">Tom Blatch</h3>
+      </div>
+      <div>
+        <div class="img-wrap" style="aspect-ratio:3/4;margin-bottom:24px;"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwmkavs04xWou6CSJu0kFwA_O0_I-Q8dxEVUD12oJ2qpZNAYZjBA9oXMKVWU4MW3grq_SldzSBV-DqZmmciU_RnXDpvBPeU9SnhXDf39oGst7EYgxjH4A5qnxVPByDQAXmYjKIdg-qqH_5oiamvWgm4fp__G2t-vWTvEQKW5OGUuoxRZ_OXesTOPCq6rR-ypIaQ_rOnQGKEMaIYdzrJf0L-PH3Ed9u4fXr8ZcyB9BCGahvwMojnQHivuWRYIVoeQU5Uvp4R5xe2Ws" alt="Sarah Green"></div>
+        <div class="team-card-role">Director, Heritage</div>
+        <h3 class="t-headline-sm c-primary">Sarah Green</h3>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- The Team (Leadership) -->
-<section class="py-[80px] md:py-[120px] px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-t border-outline/10 bg-surface">
-<div class="mb-16 max-w-2xl">
-<h2 class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.1em] mb-6">Leadership</h2>
-<h3 class="font-headline-md text-headline-md text-primary">Academic rigor meeting commercial acumen.</h3>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-gutter">
-<!-- Profile 1 -->
-<div class="group cursor-pointer">
-<div class="w-full aspect-[3/4] bg-surface-container-highest mb-6 overflow-hidden border border-outline/10 img-container">
-<img alt="Jonathan Blatch" class="w-full h-full object-cover grayscale img-zoom-hover" data-alt="A striking, high-contrast monochrome portrait of a senior male architect in a minimalist, light-filled studio. The subject exudes quiet confidence, dressed in sharp, understated modern corporate attire. The background is a soft, out-of-focus alabaster wall with subtle architectural models visible. The lighting is high-key but dramatic, emphasizing professionalism, heritage, and authoritative leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYCuEoV7kFpDgvXK21HaUNGE4LqupI2dKenEe-7o4Yn-fc_BjxRH-YnF0ITFsUIzIqAGVqVH9cnLcYJM2Ji4afAUP7_RBo577EQxQ1-Ul9Xxv-LfFGLNrCpgi2n3N9wSai9cTtYao-lwc07ykpEbBf6t6HxEZVW7tKGIr3lUzQBOJjFhv-lltC0oAF1Xp9CKRodX-4b5CG6DNDKF_JReS9e2oy9bsZfwJdeJiz8HMJoCmZ2vYNyGcXR3gNRGrN32uLVobRFs3DWFE"/>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-primary">Jonathan Blatch</h4>
-<p class="font-label-caps text-label-caps text-secondary uppercase mt-2 mb-4">BSc Hons, RIBA — Founding Partner</p>
-<div class="w-8 h-[1px] bg-outline-variant mb-4 group-hover:w-full group-hover:bg-secondary transition-all duration-700 ease-out"></div>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm">Overseeing the structural integrity and long-term macro vision of the firm's expansive residential portfolio.</p>
-</div>
-<!-- Profile 2 -->
-<div class="group cursor-pointer mt-0 md:mt-12">
-<div class="w-full aspect-[3/4] bg-surface-container-highest mb-6 overflow-hidden border border-outline/10 img-container">
-<img alt="Eleanor Green" class="w-full h-full object-cover grayscale img-zoom-hover" data-alt="A striking, high-contrast monochrome portrait of a female senior partner in a minimalist, light-filled architectural studio. She exudes quiet confidence and surgical precision, dressed in sophisticated, understated modern corporate attire. The background features expansive whitespace and subtle tonal layers of alabaster. The lighting is soft yet deliberate, emphasizing her authoritative leadership and bespoke craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVygF0CSgi2nknj1-qDNqXlgIYRss8c3W4y_fmWvZWrbjZS7GaT0opGZDVZ4QDybWETql-FQFqIU3KiLsrAxaQaRQRAVY1RV358aY0C8wxCztTwzjulCsv-Bee5uiaBZQbE0O6RFJpvxpE0_ztNBs6aoi4SVNW4dN_xHfVHsaUTFS_zGrVkPTrvgEeAeJwGj1tjflhEjtp-PSVSyx1cdAfL0OGzJQ1W52XSdxZT226SdbT0RwqpU2NI0MPf4IPhKLegpu1UzRkdaw"/>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-primary">Eleanor Green</h4>
-<p class="font-label-caps text-label-caps text-secondary uppercase mt-2 mb-4">BSc Hons, ARB — Managing Partner</p>
-<div class="w-8 h-[1px] bg-outline-variant mb-4 group-hover:w-full group-hover:bg-secondary transition-all duration-700 ease-out"></div>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm">Driving business acumen and cultivating the firm's most critical, long-standing client relationships globally.</p>
-</div>
-<!-- Profile 3 -->
-<div class="group cursor-pointer">
-<div class="w-full aspect-[3/4] bg-surface-container-highest mb-6 overflow-hidden border border-outline/10 img-container">
-<img alt="Marcus Sterling" class="w-full h-full object-cover grayscale img-zoom-hover" data-alt="A portrait of a male principal architect in a minimalist setting. He is reviewing architectural blueprints on a large white table. The scene is shot in high-fidelity monochrome, focusing on his concentrated expression. The aesthetic is editorial and modern corporate, utilizing expansive whitespace and sharp, clean lines to convey precision and substance over flash." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_kxo5OKqLUKQB3kznnULQ7RYrCaAtStGgE0r731CUh7lbK2CH05RJJL-XA5mS3C29VMoVw5JXZdKz3B3JaPTkPER5fAneaSsftXsRzz8USB7LzyTCh5BcqPLRqEgz_YhrJ_vjW9RZ0tOip17ObSho3Zd-y_upj7eE9PRvsFW7AlyYBpRjN-VR5sDj_ouQ4XzVx-dMAXjoSVefmpb-UkKf0-lVMwjAefszudz6UT-Dn5fjLgIyjtxBdX-OuS0TtBkW6SeBcDZ9QB8"/>
-</div>
-<h4 class="font-headline-sm text-headline-sm text-primary">Marcus Sterling</h4>
-<p class="font-label-caps text-label-caps text-secondary uppercase mt-2 mb-4">MArch — Principal Director</p>
-<div class="w-8 h-[1px] bg-outline-variant mb-4 group-hover:w-full group-hover:bg-secondary transition-all duration-700 ease-out"></div>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm">Leading the Surrey studio's design output, ensuring every detail meets our uncompromising standards.</p>
-</div>
-<!-- Hiring Card -->
-<div class="group cursor-pointer mt-0 md:mt-12 flex flex-col">
-<div class="w-full aspect-[3/4] bg-surface-container-low mb-6 border border-outline/10 flex flex-col items-center justify-center p-8 hover:bg-surface-container-high transition-colors duration-300">
-<span class="material-symbols-outlined text-secondary text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">person_add</span>
-<h4 class="font-headline-sm text-headline-sm text-primary text-center">Join Our Studio</h4>
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase mt-4 text-center">View Opportunities</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-surface-container-highest dark:bg-surface-container-highest border-t border-outline/10 w-full mt-20">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-gutter px-margin-mobile md:px-margin-desktop py-16 md:py-20 w-full max-w-container-max mx-auto">
-<div class="md:col-span-1 flex flex-col justify-between">
-<div>
-<div class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-none">Blatch &amp; Green</div>
-<p class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mt-2">Architects</p>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant text-sm mt-12 md:mt-0 max-w-xs">© 2024 Blatch &amp; Green. All rights reserved. Registered in England &amp; Wales.</p>
-</div>
-<div class="md:col-span-3 flex flex-col sm:flex-row gap-12 sm:gap-24 md:justify-end">
-<div class="flex flex-col space-y-4">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-[0.1em] mb-2">Locations</span>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">London Office</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Surrey Studio</a>
-</div>
-<div class="flex flex-col space-y-4">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-[0.1em] mb-2">Firm</span>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Careers</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Privacy Policy</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Terms of Service</a>
-</div>
-<div class="flex flex-col space-y-4">
-<span class="font-label-caps text-label-caps text-primary uppercase tracking-[0.1em] mb-2">Social</span>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">LinkedIn</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Instagram</a>
-</div>
-</div>
-</div>
+</main><footer class="site-footer">
+  <div class="container">
+    <div>
+      <a href="index.html" class="footer-brand">Blatch &amp; Green</a>
+      <p class="t-body c-on-surf-var">&copy; 2024 Blatch &amp; Green.<br>All rights reserved.<br>Registered in England &amp; Wales.</p>
+    </div>
+    <div>
+      <p class="t-label c-secondary" style="margin-bottom:20px">Pages</p>
+      <a href="portfolio.html" class="footer-link">Portfolio</a>
+      <a href="services.html"  class="footer-link">Services</a>
+      <a href="heritage.html"  class="footer-link">Heritage</a>
+      <a href="process.html"   class="footer-link">Process</a>
+    </div>
+    <div>
+      <p class="t-label c-secondary" style="margin-bottom:20px">Offices</p>
+      <a href="contact.html" class="footer-link">London Office</a>
+      <a href="contact.html" class="footer-link">Surrey Studio</a>
+      <a href="#"            class="footer-link">Careers</a>
+    </div>
+    <div>
+      <p class="t-label c-secondary" style="margin-bottom:20px">Legal</p>
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Terms of Service</a>
+    </div>
+  </div>
 </footer>
-</body></html>
+
+<script>
+(function(){
+  var ham=document.getElementById('navHam'),
+      mob=document.getElementById('mobNav'),
+      cls=document.getElementById('mobClose');
+  function open(){mob.style.display='flex';setTimeout(function(){mob.classList.add('open');},10);ham.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function close(){mob.classList.remove('open');ham.setAttribute('aria-expanded','false');document.body.style.overflow='';setTimeout(function(){mob.style.display='none';},260);}
+  if(ham)ham.addEventListener('click',open);
+  if(cls)cls.addEventListener('click',close);
+  if(mob)mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mob&&mob.classList.contains('open'))close();});
+})();
+</script>
+</body>
+</html>
