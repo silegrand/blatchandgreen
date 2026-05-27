@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Blatch &amp; Green - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-primary": "#c6c6c9",
+                      "on-error": "#ffffff",
+                      "secondary-fixed": "#ffe088",
+                      "secondary": "#735c00",
+                      "tertiary-fixed": "#d8e3fa",
+                      "surface-container-high": "#e7e8e9",
+                      "on-secondary-container": "#745c00",
+                      "surface-container-highest": "#e1e3e4",
+                      "surface-variant": "#e1e3e4",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#e9c349",
+                      "on-secondary-fixed-variant": "#574500",
+                      "background": "#f8f9fa",
+                      "surface-dim": "#d9dadb",
+                      "on-surface": "#191c1d",
+                      "outline-variant": "#c5c6ca",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#5d5e61",
+                      "on-tertiary-container": "#798499",
+                      "on-primary-fixed": "#1a1c1e",
+                      "tertiary": "#000001",
+                      "primary": "#000101",
+                      "on-tertiary-fixed-variant": "#3c475a",
+                      "outline": "#75777a",
+                      "inverse-on-surface": "#f0f1f2",
+                      "tertiary-container": "#111c2d",
+                      "secondary-container": "#fed65b",
+                      "on-background": "#191c1d",
+                      "primary-container": "#1a1c1e",
+                      "inverse-surface": "#2e3132",
+                      "surface-container-low": "#f3f4f5",
+                      "tertiary-fixed-dim": "#bcc7dd",
+                      "surface-container": "#edeeef",
+                      "surface-bright": "#f8f9fa",
+                      "on-primary-container": "#838486",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#e2e2e5",
+                      "on-tertiary-fixed": "#111c2c",
+                      "on-surface-variant": "#44474a",
+                      "on-primary-fixed-variant": "#454749",
+                      "on-tertiary": "#ffffff",
+                      "surface": "#f8f9fa",
+                      "on-primary": "#ffffff",
+                      "primary-fixed-dim": "#c6c6c9",
+                      "on-secondary-fixed": "#241a00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "32px",
+                      "stack-unit": "8px",
+                      "margin-mobile": "24px",
+                      "margin-desktop": "80px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Libre Caslon Text"
+                      ],
+                      "display-lg-mobile": [
+                              "Libre Caslon Text"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Libre Caslon Text"
+                      ],
+                      "label-caps": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-sm": [
+                              "Libre Caslon Text"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ken-burns {
+            transition: transform 1.5s ease-out;
+        }
+        .portfolio-card:hover .ken-burns {
+            transform: scale(1.03);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary/20 selection:text-secondary">
+<!-- Top Navigation -->
+<header class="bg-surface dark:bg-surface w-full z-50 sticky top-0 transition-colors duration-300">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-24 max-w-container-max mx-auto border-b border-outline/10 shadow-[0_4px_30px_rgba(0,0,0,0.02)]">
+<a class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase tracking-tight text-primary dark:text-inverse-primary shrink-0" href="/">
+                Blatch &amp; Green
+            </a>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md tracking-wider text-primary dark:text-inverse-primary font-semibold border-b border-secondary pb-1" href="#">Portfolio</a>
+<a class="font-body-md text-body-md tracking-wider text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors duration-300 pb-1 border-b border-transparent" href="#">Services</a>
+<a class="font-body-md text-body-md tracking-wider text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors duration-300 pb-1 border-b border-transparent" href="#">Heritage</a>
+<a class="font-body-md text-body-md tracking-wider text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors duration-300 pb-1 border-b border-transparent" href="#">Process</a>
+<a class="font-body-md text-body-md tracking-wider text-on-surface-variant dark:text-on-surface-variant/80 hover:text-secondary transition-colors duration-300 pb-1 border-b border-transparent" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-colors duration-300 rounded-none">
+                    Inquire
+                </button>
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined text-[28px]" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop pt-20 pb-16 md:pt-[120px] md:pb-[80px] max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="col-span-1 md:col-span-8 lg:col-span-6">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">A Curated Gallery of Elite Craftsmanship.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        For over four decades, Blatch &amp; Green has delivered uncompromising quality across bespoke new builds, luxury modernisations, and historic restorations. Each project stands as a testament to our enduring commitment to architectural excellence.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Portfolio Grid -->
+<section class="w-full px-margin-mobile md:px-margin-desktop pb-[120px] max-w-container-max mx-auto">
+<!-- Featured Project (Full Width) -->
+<article class="portfolio-card group mb-gutter cursor-pointer w-full">
+<div class="relative w-full aspect-[4/3] md:aspect-[21/9] overflow-hidden bg-surface-variant mb-6 border border-outline/10">
+<img alt="The Surrey Estate Exterior" class="w-full h-full object-cover ken-burns" data-alt="A sweeping wide-angle architectural photograph of a grand, modernised country estate in Surrey. The image showcases pristine white stucco walls, expansive black-framed Crittall windows, and a perfectly manicured lawn. The lighting is golden hour, casting long, elegant shadows and highlighting the texture of the building materials. The style is ultra-high-end editorial, evoking a sense of quiet luxury and meticulous craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYktLMUHNO_ulmdhLIUtjdIyzRkDnJquOuNGKK5b7xjaqU6RI9neM9QKNn8aV7dUuf85vuuxUEBU_fJbIiTVrvSMblzz6B_wsozW5swUhtdtyWN5m16v-yFkU6ftcCf3k337CzbyKA5fyjqENpc-xTIuIpXZEWdaMMQ6w531aPKMMzN1HhawB3Qijq7kvxmrfZ36A0QvVUahzo0QNWmCR_BIBxo8TiUIXo-qSbszX2lPHMJcBKk1cOlWyQHQOPlAHnZOTarycSrSg"/>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 border-b border-outline/10 pb-6">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Grand Country Estate</span>
+<h2 class="font-headline-md text-headline-sm md:text-headline-md text-primary">The Surrey Estate</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md md:text-right">
+                        A complete restoration and expansion of a Grade II listed property, seamlessly integrating modern architectural glass volumes with centuries-old stonework.
+                    </p>
+</div>
+</article>
+<!-- Grid Level 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-gutter">
+<article class="portfolio-card group cursor-pointer">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-variant mb-6 border border-outline/10">
+<img alt="Belgravia Modernisation Interior" class="w-full h-full object-cover ken-burns" data-alt="An interior shot of a sophisticated luxury living space in Belgravia, London. The room features high ceilings, ornate original cornicing contrasted with starkly modern, minimalist furniture in charcoal and alabaster tones. Natural light floods through tall sash windows. The image has a clean, high-key editorial aesthetic, emphasizing bespoke joinery and flawless finishes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2hUR9tGOLg7hrCC83Trw7IiYF3UPXM9XCPv90A7x03pmziY3WCWFD4pFgGdmvlx6njg7t4LIqrKZQGyvFLuzIhTgUTnIqYrJPfEVl8lGExbbXFOyphteb76N_1nULF07R-rWt_Vjh33bvgHf79a-PrAOAAdcJhh2rbqJSmyTxl3nMqDxrOTr7ejFizOg4UTUm4607WvoxfXom_ArodaNIaY8pUYATfO4OPizSKhlyZmed9uOfoU0L2UmDrhUe1CYw9quIICuEdrM"/>
+</div>
+<div class="border-b border-outline/10 pb-6">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">London Luxury Renovation</span>
+<h2 class="font-headline-md text-headline-sm md:text-headline-md text-primary mb-3">Belgravia Modernisation</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Stripping back a prestigious townhouse to its core to introduce a subterranean wellness suite and state-of-the-art living spaces while preserving its historic facade.
+                        </p>
+</div>
+</article>
+<article class="portfolio-card group cursor-pointer mt-0 md:mt-24">
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-variant mb-6 border border-outline/10">
+<img alt="The Highgate Residence New Build" class="w-full h-full object-cover ken-burns" data-alt="A striking exterior view of a contemporary new-build residential home in Highgate. The architecture features clean, sharp geometric lines, extensive use of structural glass, and dark timber cladding. The shot is taken at dusk, with warm, inviting light spilling from the expansive interior windows onto a minimalist terrace. The overall mood is modern, authoritative, and luxuriously serene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5gc5NQLs1hf-oOpq1xLRszS_UwCL4jsgkeHiGG8yBjZYScKmiU1rAxD8-15D3B-kcGA4omfyvxsrM9sALHWj8xFmE9y2QjCafHY5n7s77SAOoaVEcHI9LB5zipXCKJ89VurMp_KBW7j8xwnFN4_RM0fnlSKtVPCVB9gO5cXyTMTn1FLEGCayjKwmMUphOpsxeCQ2waNiY4Z5qyGtJSmBaie8FNuUFeg7aHqS44li80ZMryOs3veQ5PTs9c3X01l3gWMZfzMCLZVE"/>
+</div>
+<div class="border-b border-outline/10 pb-6">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Bespoke New Build</span>
+<h2 class="font-headline-md text-headline-sm md:text-headline-md text-primary mb-3">The Highgate Residence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            A ground-up construction demonstrating surgical precision in detailing. Featuring cantilevered living spaces and extensive structural glazing to maximize natural light.
+                        </p>
+</div>
+</article>
+</div>
+<!-- Single Feature (Asymmetric) -->
+<article class="portfolio-card group cursor-pointer w-full mt-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="col-span-1 md:col-span-5 order-2 md:order-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Heritage Restoration</span>
+<h2 class="font-headline-md text-headline-sm md:text-headline-md text-primary mb-4">The Cotswold Manor</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            A meticulous three-year project resurrecting a dilapidated manor house. Traditional stonemasonry techniques were employed alongside the discreet installation of cutting-edge environmental systems.
+                        </p>
+<span class="inline-flex items-center font-label-caps text-label-caps text-primary hover:text-secondary transition-colors uppercase tracking-widest group-hover:gap-2 duration-300">
+                            View Case Study <span class="material-symbols-outlined ml-1 text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</span>
+</div>
+<div class="col-span-1 md:col-span-7 order-1 md:order-2">
+<div class="relative w-full aspect-square md:aspect-[4/3] overflow-hidden bg-surface-variant border border-outline/10">
+<img alt="The Cotswold Manor Detail" class="w-full h-full object-cover ken-burns" data-alt="A close-up architectural detail shot of a meticulously restored Cotswold stone manor. The image focuses on the texture of the honey-colored limestone and a newly installed, highly polished solid oak door with minimal, modern bronze ironmongery. The lighting is soft and natural, emphasizing the juxtaposition of centuries-old craftsmanship with contemporary precision. The aesthetic is tactile, understated, and intensely premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFpWT8hIL6AU-GUchX3WSKOwIdAOjjydPNDZswSeNXkOzrWKJ7Vf1wmF6_QXOhcGeuhL-UXgYQ29xE1-_0XgO5_IlDDw-d8s6r09N5F-iEI7mdLFAJYIh3GnXi_DiFBzkNWXHh2dfcNpt-oTAFnHI8jJ5BVdpIWbX4s2WI9yQFUEvjdTINKifG-SsrtebUOu1txl40iGYRvf1LbhS0XVTfmeyPqxi6hr4Ri93gFLOKZFu9j1RjG5SM8Vye3_qdCuzTLYWibUstlkE"/>
+</div>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-highest border-t border-outline/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-20 w-full max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2 flex flex-col justify-between">
+<a class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase tracking-tight mb-8 md:mb-0" href="/">
+                    Blatch &amp; Green
+                </a>
+<p class="font-body-md text-body-md text-on-surface-variant hidden md:block">
+                    © 2026 Blatch &amp; Green. All rights reserved. Registered in England &amp; Wales.
+                </p>
+</div>
+<div class="col-span-1">
+<h3 class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-6">Locations</h3>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">London Office</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Surrey Studio</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h3 class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-6">Information</h3>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Careers</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-8 md:hidden col-span-1">
+                © 2026 Blatch &amp; Green. All rights reserved. Registered in England &amp; Wales.
+            </p>
+</div>
+</footer>
+</body></html>
