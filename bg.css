@@ -476,7 +476,7 @@ hr.rule { border: none; border-top: 1px solid var(--outline-faint); }
   .grid-4     { grid-template-columns: 1fr 1fr; }
   .disciplines-grid { grid-template-columns: 1fr 1fr; }
   .heritage-stats { grid-template-columns: 1fr 1fr; gap: 0; max-width: 100%; }
-  .heritage-stats > div { padding: 24px 0; border-right: 1px solid var(--outline-faint); }
+  .heritage-stats > div { padding: 24px 16px; text-align: center; border-right: 1px solid var(--outline-faint); }
   .heritage-stats > div:nth-child(2n) { border-right: none; }
   .heritage-stats > div:nth-child(3),
   .heritage-stats > div:nth-child(4) { border-top: 1px solid var(--outline-faint); }
