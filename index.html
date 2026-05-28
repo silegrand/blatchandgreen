@@ -18,12 +18,13 @@
     <button class="mob-close" id="mobClose" aria-label="Close menu">&times;</button>
   </div>
   <div class="mob-links">
-    <a href="portfolio.html">Portfolio</a>
-<a href="services.html">Services</a>
-<a href="heritage.html">Heritage</a>
-<a href="process.html">Process</a>
-<a href="contact.html">Contact</a>
-
+    <p class="mob-nav-section-label">Our Work</p>
+    <a href="portfolio.html">All Projects</a>
+    <a href="tankerton.html" class="mob-nav-sub">Tankerton Slopes Residence</a>
+    <a href="services.html">Services</a>
+    <a href="heritage.html">Heritage</a>
+    <a href="process.html">Process</a>
+    <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn btn-ghost-dark mob-cta" style="margin-top:32px;width:fit-content">Inquire</a>
   </div>
 </div>
@@ -32,12 +33,19 @@
   <div class="container">
     <a href="index.html" class="nav-brand">Blatch &amp; Green</a>
     <div class="nav-links">
-      <a href="portfolio.html">Portfolio</a>
-<a href="services.html">Services</a>
-<a href="heritage.html">Heritage</a>
-<a href="process.html">Process</a>
-<a href="contact.html">Contact</a>
-
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Our Work <span class="nav-dropdown-caret">&#9660;</span></button>
+        <div class="nav-dropdown-panel" role="menu">
+          <a href="portfolio.html" role="menuitem">All Projects</a>
+          <div class="nav-dropdown-divider"></div>
+          <p class="nav-dropdown-label">Case Studies</p>
+          <a href="tankerton.html" role="menuitem">Tankerton Slopes Residence</a>
+        </div>
+      </div>
+      <a href="services.html">Services</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
     </div>
     <div class="nav-right">
       <a href="contact.html" class="btn btn-primary">Inquire</a>
@@ -165,6 +173,124 @@
     </div>
   </div>
 </footer>
+
+<style>
+/* ── Nav dropdown ── */
+.nav-dropdown { position: relative; }
+
+.nav-dropdown-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: inherit;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.01em;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+}
+
+.nav-dropdown-trigger:hover { color: var(--secondary); }
+
+.nav-dropdown-caret {
+  font-size: 8px;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.nav-dropdown[data-open] .nav-dropdown-caret { transform: rotate(180deg); }
+
+.nav-dropdown-panel {
+  display: none;
+  position: absolute;
+  top: calc(100% + 16px);
+  left: -24px;
+  min-width: 240px;
+  background: #fff;
+  border: 1px solid var(--outline-faint);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  padding: 8px 0;
+  z-index: 200;
+}
+
+.nav-dropdown[data-open] .nav-dropdown-panel { display: block; }
+
+.nav-dropdown-panel a {
+  display: block;
+  padding: 10px 24px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 0.875rem;
+  color: var(--primary);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-dropdown-panel a:hover {
+  background: var(--surf-lowest);
+  color: var(--secondary);
+}
+
+.nav-dropdown-divider {
+  height: 1px;
+  background: var(--outline-faint);
+  margin: 8px 0;
+}
+
+.nav-dropdown-label {
+  padding: 4px 24px 6px;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin: 0;
+}
+
+/* Mobile nav additions */
+.mob-nav-section-label {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin: 0 0 4px 0;
+}
+
+.mob-nav-sub {
+  font-size: 0.9rem !important;
+  opacity: 0.7;
+  padding-left: 12px !important;
+}
+</style>
+
+<script>
+(function(){
+  // Dropdown
+  var triggers = document.querySelectorAll('.nav-dropdown-trigger');
+  triggers.forEach(function(trigger) {
+    var dropdown = trigger.closest('.nav-dropdown');
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = dropdown.hasAttribute('data-open');
+      // Close all
+      document.querySelectorAll('.nav-dropdown[data-open]').forEach(function(d) { d.removeAttribute('data-open'); d.querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded','false'); });
+      if (!isOpen) { dropdown.setAttribute('data-open',''); trigger.setAttribute('aria-expanded','true'); }
+    });
+  });
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.nav-dropdown[data-open]').forEach(function(d) { d.removeAttribute('data-open'); d.querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded','false'); });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') { document.querySelectorAll('.nav-dropdown[data-open]').forEach(function(d) { d.removeAttribute('data-open'); }); }
+  });
+})();
+</script>
 
 <script>
 (function(){
