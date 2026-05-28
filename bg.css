@@ -335,7 +335,7 @@ hr.rule { border: none; border-top: 1px solid var(--outline-faint); }
 /* ── Contact layout ───────────────────────────────── */
 .contact-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 80px; align-items: start; }
 .contact-detail-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--secondary); margin-bottom: 8px; }
-.contact-form-wrap { background: var(--surf-low); padding: 48px; }
+.contact-form-wrap { background: rgba(26,58,42,0.06); padding: 48px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
 .form-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-surf-var); }
