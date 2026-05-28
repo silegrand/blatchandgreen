@@ -375,7 +375,7 @@ hr.rule { border: none; border-top: 1px solid var(--outline-faint); }
 /* ── Intro panel ──────────────────────────────────── */
 .intro-panel {
   background: rgba(26,58,42,0.06);
-  border-left: 3px solid var(--secondary);
+  border-left: 3px solid var(--primary);
   padding: 40px 48px;
   max-width: 720px;
   margin: 0 auto;
@@ -384,7 +384,7 @@ hr.rule { border: none; border-top: 1px solid var(--outline-faint); }
   font-family: 'Libre Caslon Text', serif;
   font-size: clamp(1.15rem, 2vw, 1.35rem);
   line-height: 1.65;
-  color: var(--secondary);
+  color: var(--primary);
   margin-bottom: 20px;
 }
 .intro-panel p:last-child {
