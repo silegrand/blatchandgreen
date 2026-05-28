@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tankerton Slopes Residence | Blatch &amp; Green</title>
+<meta name="description" content="A complete remodel of a 1970s detached house on the Kent coast — a forever home for a family of five, covered by The Observer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bg.css">
+<style>
+  /* ── Case study specific styles ── */
+
+  .cs-hero {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: var(--primary);
+  }
+
+  .cs-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+    filter: grayscale(100%);
+    transition: filter 1.2s ease, opacity 1.2s ease;
+  }
+
+  .cs-hero:hover .cs-hero-img {
+    filter: grayscale(0%);
+    opacity: 0.65;
+  }
+
+  .cs-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(0,1,1,0.92) 0%,
+      rgba(0,1,1,0.4) 50%,
+      rgba(0,1,1,0.1) 100%
+    );
+  }
+
+  .cs-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 72px;
+    width: 100%;
+  }
+
+  .cs-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 32px;
+  }
+
+  .cs-breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .cs-breadcrumb a:hover { color: var(--secondary); }
+  .cs-breadcrumb span { color: rgba(255,255,255,0.25); }
+
+  .cs-hero-title {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: #fff;
+    max-width: 700px;
+    margin-bottom: 28px;
+  }
+
+  .cs-hero-title em {
+    color: var(--secondary);
+    font-style: italic;
+  }
+
+  .cs-hero-meta {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .cs-hero-meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cs-hero-meta-label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--secondary);
+  }
+
+  .cs-hero-meta-value {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  /* ── Stats row ── */
+  .cs-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--outline-faint);
+    border-bottom: 1px solid var(--outline-faint);
+    margin: 0;
+  }
+
+  .cs-stat {
+    padding: 40px 0;
+    border-right: 1px solid var(--outline-faint);
+  }
+
+  .cs-stat:last-child { border-right: none; }
+
+  .cs-stat-number {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .cs-stat-label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondary);
+  }
+
+  /* ── Body copy ── */
+  .cs-body {
+    max-width: 680px;
+  }
+
+  .cs-body p {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: 1.0625rem;
+    line-height: 1.85;
+    color: #3a3a3a;
+    margin-bottom: 28px;
+  }
+
+  .cs-body p:last-child { margin-bottom: 0; }
+
+  /* ── Pull quote ── */
+  .cs-pullquote {
+    border-left: 3px solid var(--secondary);
+    padding: 8px 0 8px 36px;
+    margin: 56px 0;
+  }
+
+  .cs-pullquote blockquote {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--primary);
+    margin: 0 0 16px 0;
+  }
+
+  .cs-pullquote cite {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    font-style: normal;
+  }
+
+  /* ── Image ── */
+  .cs-image-full {
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .cs-image-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 1.4s ease, transform 6s ease;
+    transform: scale(1.03);
+  }
+
+  .cs-image-full:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.0);
+  }
+
+  .cs-image-caption {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-top: 14px;
+  }
+
+  /* ── Two-col layout ── */
+  .cs-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* ── Press mention ── */
+  .cs-press {
+    background: var(--primary);
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .cs-press-logo {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.35);
+    white-space: nowrap;
+    min-width: 120px;
+  }
+
+  .cs-press-divider {
+    width: 1px;
+    height: 48px;
+    background: rgba(255,255,255,0.15);
+    flex-shrink: 0;
+  }
+
+  .cs-press-text {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: 1.0rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .cs-press-text em {
+    color: var(--secondary);
+    font-style: normal;
+  }
+
+  /* ── Section label override for dark context ── */
+  .cs-section-label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 20px;
+  }
+
+  .cs-h2 {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--primary);
+    margin-bottom: 28px;
+  }
+
+  /* ── Next project nav ── */
+  .cs-next {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 0;
+    border-top: 1px solid var(--outline-faint);
+    text-decoration: none;
+  }
+
+  .cs-next-label {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 6px;
+  }
+
+  .cs-next-title {
+    font-family: 'Libre Caslon Text', Georgia, serif;
+    font-size: 1.4rem;
+    color: var(--primary);
+    transition: color 0.2s;
+  }
+
+  .cs-next:hover .cs-next-title { color: var(--secondary); }
+
+  .cs-next-arrow {
+    font-size: 1.8rem;
+    color: var(--secondary);
+    transition: transform 0.25s;
+  }
+
+  .cs-next:hover .cs-next-arrow { transform: translateX(6px); }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .cs-stats { grid-template-columns: repeat(2, 1fr); }
+    .cs-stat:nth-child(2) { border-right: none; }
+    .cs-stat:nth-child(3) { border-top: 1px solid var(--outline-faint); }
+    .cs-stat:nth-child(4) { border-top: 1px solid var(--outline-faint); }
+  }
+
+  @media (max-width: 768px) {
+    .cs-two-col { grid-template-columns: 1fr; gap: 48px; }
+    .cs-press { flex-direction: column; align-items: flex-start; gap: 20px; padding: 32px; }
+    .cs-press-divider { width: 40px; height: 1px; }
+    .cs-hero-meta { gap: 24px; }
+    .cs-stats { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 480px) {
+    .cs-stats { grid-template-columns: 1fr 1fr; }
+    .cs-stat { padding: 28px 0; }
+    .cs-stat-number { font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Mobile nav -->
+<div class="mob-nav" id="mobNav">
+  <div class="mob-nav-head">
+    <a href="index.html" class="mob-nav-brand">Blatch &amp; Green</a>
+    <button class="mob-close" id="mobClose" aria-label="Close menu">&times;</button>
+  </div>
+  <div class="mob-links">
+    <a href="portfolio.html">Portfolio</a>
+    <a href="services.html">Services</a>
+    <a href="heritage.html">Heritage</a>
+    <a href="process.html">Process</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-ghost-dark mob-cta" style="margin-top:32px;width:fit-content">Inquire</a>
+  </div>
+</div>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="container">
+    <a href="index.html" class="nav-brand">Blatch &amp; Green</a>
+    <div class="nav-links">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="services.html">Services</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-primary">Inquire</a>
+      <button class="nav-ham" id="navHam" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- Hero -->
+  <section class="cs-hero">
+    <img class="cs-hero-img" src="images/blatch3.avif" alt="Tankerton Slopes Residence — exterior view">
+    <div class="cs-hero-gradient"></div>
+    <div class="cs-hero-content">
+      <div class="container">
+        <div class="cs-breadcrumb">
+          <a href="portfolio.html">Portfolio</a>
+          <span>/</span>
+          <span>Tankerton Slopes Residence</span>
+        </div>
+        <h1 class="cs-hero-title">
+          A <em>Forever Home</em><br>on the Kent Coast
+        </h1>
+        <div class="cs-hero-meta">
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Location</span>
+            <span class="cs-hero-meta-value">Tankerton, Whitstable, Kent</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Scope</span>
+            <span class="cs-hero-meta-value">Complete Remodel &amp; Extension</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">Duration</span>
+            <span class="cs-hero-meta-value">Two Years</span>
+          </div>
+          <div class="cs-hero-meta-item">
+            <span class="cs-hero-meta-label">As featured in</span>
+            <span class="cs-hero-meta-value">The Observer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="bg-surface">
+    <div class="container">
+      <div class="cs-stats">
+        <div class="cs-stat">
+          <div class="cs-stat-number">1970s</div>
+          <div class="cs-stat-label">Original Build</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-number">6m</div>
+          <div class="cs-stat-label">Rear Garden Opening</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-number">2</div>
+          <div class="cs-stat-label">Years, Start to Finish</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-number">100%</div>
+          <div class="cs-stat-label">Local Supply Chain</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brief & narrative -->
+  <section class="sec bg-surface">
+    <div class="container cs-two-col">
+      <div>
+        <div class="cs-section-label">The Brief</div>
+        <h2 class="cs-h2">From island to open house — a home that works for everyone</h2>
+        <div class="cs-body">
+          <p>Marine Parade faces the cliff-top lawns of Tankerton Slopes just outside Whitstable. The view stretches across the shingle beach to the Kentish Flats wind farm, six miles out to sea. It was this outlook — and the prospect of a different kind of life — that drew Mel and Steve Payne to the area in 2015.</p>
+          <p>When the detached 1970s house came to market, sold by the family of its original owners, the Paynes saw an opportunity. Their priority was a home that could accommodate the full range of their family's needs: generous, sociable spaces for when friends came round, and quieter retreats for when they were needed. The house had to work hard.</p>
+          <p>They turned to Sonya Flynn and Mark Baker of local architecture practice Meme, who had listened carefully to how the family wanted to live. The first scheme they presented was, as Mel recalls, essentially the building they now inhabit.</p>
+        </div>
+      </div>
+      <div>
+        <div class="cs-pullquote">
+          <blockquote>"We were looking for something that was a bit life-changing. This house takes us off that island."</blockquote>
+          <cite>Mel Payne, Client</cite>
+        </div>
+        <div class="cs-body">
+          <p>The commission presented a particular planning and structural challenge: how to completely reimagine a 1970s shell while respecting the roofline and character of Marine Parade — a street with its own established identity overlooking a protected coastal landscape.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-width image -->
+  <section style="background:var(--primary);padding:0;">
+    <div class="container" style="padding-top:0;padding-bottom:0;">
+      <div class="cs-image-full">
+        <img src="images/blatch4.avif" alt="Tankerton Slopes Residence — interior">
+      </div>
+      <p class="cs-image-caption" style="padding-bottom:48px;">Interior — bespoke joinery and open-plan living spaces designed around family life</p>
+    </div>
+  </section>
+
+  <!-- Delivery -->
+  <section class="sec bg-surf-low">
+    <div class="container cs-two-col">
+      <div>
+        <div class="cs-section-label">The Delivery</div>
+        <h2 class="cs-h2">A complete remodel — dark and stealth-like outside, full of light within</h2>
+        <div class="cs-body">
+          <p>The house was comprehensively remodelled with extensions to both the front and rear. The exterior was clad in dark render, with black timber fins at ground-floor level and expansive glazing and balconies above — maximising the sea and sky views while presenting a composed, considered face to the street.</p>
+          <p>The original roof pitch was retained, with the loft space opened up and two glass triangles inserted into the gable — a detail that brings light deep into the plan. The floorplan was reorganised around a generous 6-metre opening from kitchen-dining to the south-facing garden, with a series of more intimate spaces — a ground-floor playroom, a family snug — woven into the layout alongside.</p>
+          <p>Throughout, bespoke brass-trimmed cabinetry and carefully considered colour — Mel made every choice herself — created an interior that is warm, personal, and entirely of a piece with the building's character.</p>
+        </div>
+      </div>
+      <div>
+        <div class="cs-body" style="margin-top:56px;">
+          <p>The project was future-proofed from the outset. A ground-floor guest room and snug have been designed to become a self-contained front suite for Gus, should he choose to remain at home as an adult. A garden studio offers further possibilities for independence.</p>
+          <p>Crucially, the entire supply chain was local. The architects, the joiners, the bespoke kitchen maker, and the principal contractor were all from the Whitstable area — a decision that, as Mel notes, brought a level of personal care and attention that exceeded expectations.</p>
+        </div>
+        <div class="cs-pullquote" style="margin-top:40px;">
+          <blockquote>"Nothing was a bind and I never felt stressed: I just loved every part of the process. And now we get to live in it."</blockquote>
+          <cite>Mel Payne, Client</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Press mention -->
+  <section style="padding:0;background:var(--surf-lowest);">
+    <div class="container" style="padding-top:0;padding-bottom:0;">
+      <div class="cs-press">
+        <div class="cs-press-logo">The Observer</div>
+        <div class="cs-press-divider"></div>
+        <p class="cs-press-text">This project was featured in <em>The Observer</em>, October 2019, as an example of considered, family-centred residential design on the Kent coast.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to portfolio / next project -->
+  <section class="sec bg-surface">
+    <div class="container">
+      <a href="portfolio.html" class="cs-next">
+        <div>
+          <div class="cs-next-label">Back to</div>
+          <div class="cs-next-title">All Projects</div>
+        </div>
+        <div class="cs-next-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band">
+    <div class="container">
+      <div>
+        <h2 class="t-headline-md c-on-primary" style="margin-bottom:12px;">Your commission begins with a conversation.</h2>
+        <p class="t-body" style="color:rgba(255,255,255,0.6);max-width:520px;">We take a limited number of commissions each year. If you are considering a project, we welcome the opportunity to discuss it in confidence.</p>
+      </div>
+      <a href="contact.html" class="btn btn-ghost-dark">Enquire Now</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <a href="index.html" class="footer-brand">Blatch &amp; Green</a>
+      <p class="t-body c-on-surf-var">&copy; 2024 Blatch &amp; Green.<br>All rights reserved.<br>Registered in England &amp; Wales.</p>
+    </div>
+    <div>
+      <p class="t-label c-secondary" style="margin-bottom:20px">Pages</p>
+      <a href="portfolio.html" class="footer-link">Portfolio</a>
+      <a href="services.html"  class="footer-link">Services</a>
+      <a href="heritage.html"  class="footer-link">Heritage</a>
+      <a href="process.html"   class="footer-link">Process</a>
+    </div>
+    <div>
+      <p class="t-label c-secondary" style="margin-bottom:20px">Offices</p>
+      <a href="contact.html" class="footer-link">London Office</a>
+      <a href="contact.html" class="footer-link">Surrey Studio</a>
+      <a href="#"            class="footer-link">Careers</a>
+    </div>
+    <div>
+      <p class="t-label c-secondary" style="margin-bottom:20px">Legal</p>
+      <a href="#" class="footer-link">Privacy Policy</a>
+      <a href="#" class="footer-link">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ham=document.getElementById('navHam'),
+      mob=document.getElementById('mobNav'),
+      cls=document.getElementById('mobClose');
+  function open(){mob.style.display='flex';setTimeout(function(){mob.classList.add('open');},10);ham.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function close(){mob.classList.remove('open');ham.setAttribute('aria-expanded','false');document.body.style.overflow='';setTimeout(function(){mob.style.display='none';},260);}
+  if(ham)ham.addEventListener('click',open);
+  if(cls)cls.addEventListener('click',close);
+  if(mob)mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mob&&mob.classList.contains('open'))close();});
+})();
+</script>
+</body>
+</html>
