@@ -376,6 +376,15 @@ hr.rule { border: none; border-top: 1px solid var(--outline-faint); }
 .footer-link { font-size: 16px; color: var(--on-surf-var); display: block; margin-bottom: 16px; transition: color var(--transition); }
 .footer-link:hover { color: var(--secondary); }
 
+/* ── Four disciplines grid ────────────────────────── */
+.disciplines-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: var(--gutter); }
+
+/* ── Heritage team section ────────────────────────── */
+.team-section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+
+/* ── Mobile nav CTA button ────────────────────────── */
+.mob-cta { padding: 10px 24px !important; font-size: 11px !important; letter-spacing: 0.08em !important; }
+
 /* ── Intro panel ──────────────────────────────────── */
 .intro-panel {
   background: rgba(26,58,42,0.06);
@@ -449,9 +458,12 @@ hr.rule { border: none; border-top: 1px solid var(--outline-faint); }
   /* Grids */
   .grid-3     { grid-template-columns: 1fr; }
   .grid-4     { grid-template-columns: 1fr 1fr; }
+  .disciplines-grid { grid-template-columns: 1fr 1fr; }
   .port-grid  { grid-template-columns: 1fr; }
   .port-feat  { grid-column: 1; }
   .team-grid  { grid-template-columns: 1fr 1fr; }
+  .team-section-grid { grid-template-columns: 1fr; gap: 32px; }
+  .team-section-grid > div:last-child { order: -1; }
 
   /* Process steps — stack cleanly */
   .step { grid-template-columns: 1fr; gap: 20px; padding: 40px 0; }
@@ -507,6 +519,7 @@ hr.rule { border: none; border-top: 1px solid var(--outline-faint); }
 
   /* Grids */
   .grid-4     { grid-template-columns: 1fr; }
+  .disciplines-grid { grid-template-columns: 1fr; }
   .team-grid  { grid-template-columns: 1fr; }
 
   /* Footer */
