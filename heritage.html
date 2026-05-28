@@ -9,6 +9,41 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="bg.css">
+<style>
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger {
+  background: none; border: none; cursor: pointer;
+  font-family: 'Hanken Grotesk', sans-serif; font-size: inherit;
+  font-weight: 600; color: var(--primary); letter-spacing: 0.01em;
+  padding: 0; display: flex; align-items: center; gap: 5px; transition: color 0.2s;
+}
+.nav-dropdown-trigger:hover { color: var(--secondary); }
+.nav-dropdown-caret { font-size: 8px; transition: transform 0.2s; display: inline-block; }
+.nav-dropdown[data-open] .nav-dropdown-caret { transform: rotate(180deg); }
+.nav-dropdown-panel {
+  display: none; position: absolute; top: calc(100% + 16px); left: -24px;
+  min-width: 240px; background: #fff; border: 1px solid var(--outline-faint);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10); padding: 8px 0; z-index: 200;
+}
+.nav-dropdown[data-open] .nav-dropdown-panel { display: block; }
+.nav-dropdown-panel a {
+  display: block; padding: 10px 24px;
+  font-family: 'Hanken Grotesk', sans-serif; font-size: 0.875rem;
+  color: var(--primary); text-decoration: none; transition: background 0.15s, color 0.15s;
+}
+.nav-dropdown-panel a:hover { background: var(--surf-lowest); color: var(--secondary); }
+.nav-dropdown-divider { height: 1px; background: var(--outline-faint); margin: 8px 0; }
+.nav-dropdown-label {
+  padding: 4px 24px 6px; font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--secondary); margin: 0;
+}
+.mob-nav-section-label {
+  font-family: 'Hanken Grotesk', sans-serif; font-size: 10px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--secondary); margin: 0 0 4px 0;
+}
+.mob-nav-sub { font-size: 0.9rem !important; opacity: 0.7; padding-left: 12px !important; }
+</style>
 </head>
 <body>
 <!-- Mobile nav -->
@@ -17,7 +52,7 @@
     <a href="index.html" class="mob-nav-brand">Blatch &amp; Green</a>
     <button class="mob-close" id="mobClose" aria-label="Close menu">&times;</button>
   </div>
-  <div class="mob-links">
+    <div class="mob-links">
     <p class="mob-nav-section-label">Our Work</p>
     <a href="portfolio.html">All Projects</a>
     <a href="tankerton.html" class="mob-nav-sub">Tankerton Slopes Residence</a>
@@ -32,7 +67,7 @@
 <nav class="site-nav" aria-label="Main navigation">
   <div class="container">
     <a href="index.html" class="nav-brand">Blatch &amp; Green</a>
-    <div class="nav-links">
+        <div class="nav-links">
       <div class="nav-dropdown">
         <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Our Work <span class="nav-dropdown-caret">&#9660;</span></button>
         <div class="nav-dropdown-panel" role="menu">
@@ -57,17 +92,20 @@
 </nav>
 
 <main>
-<section style="position:relative;min-height:60vh;display:flex;align-items:flex-end;background:var(--primary);overflow:hidden;">
+<section style="position:relative;min-height:90vh;display:flex;align-items:center;background:var(--surf-lowest);overflow:hidden;">
   <div style="position:absolute;inset:0;width:100%;height:100%;">
-    <img src="images/blatch7.jpg" alt="Est. 1982" style="width:100%;height:100%;object-fit:cover;opacity:0.55;filter:grayscale(100%);transition:filter 1.2s ease,opacity 1.2s ease;" onmouseover="this.style.filter='grayscale(0%)';this.style.opacity='0.65'" onmouseout="this.style.filter='grayscale(100%)';this.style.opacity='0.55'">
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,1,1,0.88) 0%,rgba(0,1,1,0.35) 55%,rgba(0,1,1,0.08) 100%);"></div>
+    <img src="images/blatch7.jpg" alt="Est. 1982" style="width:100%;height:100%;object-fit:cover;opacity:0.7;mix-blend-mode:multiply;">
+    <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(248,249,250,0.92) 0%, rgba(248,249,250,0.6) 50%, transparent 100%);"></div>
   </div>
-  <div class="container" style="position:relative;z-index:2;padding-top:80px;padding-bottom:64px;">
-    <div class="sec-label" style="color:var(--secondary);margin-bottom:16px;">Est. 1982</div>
-    <h1 class="t-headline-md" style="color:#fff;max-width:640px;margin-bottom:16px;">Four Decades. One Standard.</h1>
-    <p class="t-body-lg" style="color:rgba(255,255,255,0.6);max-width:520px;">Founded on the conviction that private residential construction deserves the same rigour as the most demanding commercial work.</p>
+  <div class="container" style="position:relative;z-index:2;padding-top:80px;padding-bottom:80px;">
+    <div style="max-width:600px;">
+      <div class="sec-label" style="margin-bottom:20px;">Est. 1982</div>
+      <h1 class="t-display c-primary" style="margin-bottom:24px;max-width:520px;">Four Decades.<br><em style="color:var(--secondary);">One Standard.</em></h1>
+      <p class="t-body-lg c-on-surf-var" style="max-width:480px;">Founded on the conviction that private residential construction deserves the same rigour as the most demanding commercial work.</p>
+    </div>
   </div>
 </section>
+
       <h1 class="t-display c-primary" style="margin-bottom:32px;">Four Decades.<br>One Standard.</h1>
       <p class="t-body-lg c-on-surf-var" style="margin-bottom:24px;">Blatch &amp; Green was founded in 1982 by Edward Blatch and James Green, two site managers who left a national contractor with a shared conviction: that private residential construction deserved the same rigour as the most demanding commercial projects.</p>
       <p class="t-body c-on-surf-var">Their first commission was a Victorian townhouse restoration in Kensington. It took eighteen months. The client recommended them to three others before it was finished. That pattern — work so good it requires no advertising — has defined the firm ever since.</p>
@@ -182,6 +220,21 @@
   if(cls)cls.addEventListener('click',close);
   if(mob)mob.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&mob&&mob.classList.contains('open'))close();});
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.nav-dropdown-trigger').forEach(function(trigger){
+    var dropdown = trigger.closest('.nav-dropdown');
+    trigger.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = dropdown.hasAttribute('data-open');
+      document.querySelectorAll('.nav-dropdown[data-open]').forEach(function(d){d.removeAttribute('data-open');d.querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded','false');});
+      if(!isOpen){dropdown.setAttribute('data-open','');trigger.setAttribute('aria-expanded','true');}
+    });
+  });
+  document.addEventListener('click',function(){document.querySelectorAll('.nav-dropdown[data-open]').forEach(function(d){d.removeAttribute('data-open');});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.nav-dropdown[data-open]').forEach(function(d){d.removeAttribute('data-open');});});
 })();
 </script>
 </body>
