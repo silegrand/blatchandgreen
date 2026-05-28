@@ -8,7 +8,7 @@
 
 /* ── Tokens ───────────────────────────────────────── */
 :root {
-  --primary:      #000101;
+  --primary:      #1a3a2a;
   --secondary:    #735c00;
   --sec-pale:     #f5edd6;
   --on-primary:   #ffffff;
@@ -171,7 +171,7 @@ input, select, textarea, button { font-family: var(--sans); }
   background: var(--secondary);
   color: var(--on-secondary);
 }
-.btn-ghost-dark:hover { opacity: 0.9; }
+.btn-ghost-dark:hover { background: #a08400; }
 
 /* ── Nav ──────────────────────────────────────────── */
 .site-nav {
