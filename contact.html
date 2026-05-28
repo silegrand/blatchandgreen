@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="bg.css">
+<link rel="stylesheet" href="bg.css?v=2">
 <style>
 .nav-dropdown { position: relative; }
 .nav-dropdown-trigger {
@@ -56,8 +56,8 @@
     <p class="mob-nav-section-label">Our Work</p>
     <a href="portfolio.html">All Projects</a>
     <a href="tankerton.html" class="mob-nav-sub">Tankerton Slopes Residence</a>
-        <a href="heritage.html">Heritage</a>
-      <a href="services.html">Services</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="services.html">Our Services</a>
     <a href="process.html">Process</a>
     <a href="contact.html">Contact</a>
     <a href="contact.html" class="btn btn-ghost-dark mob-cta" style="margin-top:32px;width:fit-content">Inquire</a>
@@ -68,6 +68,9 @@
   <div class="container">
     <a href="index.html" class="nav-brand">Blatch &amp; Green</a>
         <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="services.html">Our Services</a>
       <div class="nav-dropdown">
         <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">Our Work <span class="nav-dropdown-caret">&#9660;</span></button>
         <div class="nav-dropdown-panel" role="menu">
@@ -77,8 +80,6 @@
           <a href="tankerton.html" role="menuitem">Tankerton Slopes Residence</a>
         </div>
       </div>
-            <a href="heritage.html">Heritage</a>
-      <a href="services.html">Services</a>
       <a href="process.html">Process</a>
       <a href="contact.html" class="active">Contact</a>
     </div>
@@ -185,15 +186,16 @@ function handleSubmit(e){
 }
 </script><footer class="site-footer">
   <div class="container">
-    <div>
+        <div>
       <a href="index.html" class="footer-brand">Blatch &amp; Green</a>
-      <p class="t-body c-on-surf-var">&copy; 2024 Blatch &amp; Green.<br>All rights reserved.<br>Registered in England &amp; Wales.</p>
+      <p class="t-body c-on-surf-var" style="margin-top:12px;">Westgate House, 87 St Dunstans Street<br>Canterbury, Kent, CT2 8AE</p>
+      <a href="mailto:sales@blatchandgreen.com" class="t-body c-primary" style="display:block;margin-top:6px;font-size:0.875rem;">sales@blatchandgreen.com</a>
     </div>
     <div>
       <p class="t-label c-secondary" style="margin-bottom:20px">Pages</p>
       <a href="portfolio.html" class="footer-link">Portfolio</a>
-            <a href="heritage.html"  class="footer-link">Heritage</a>
-      <a href="services.html"  class="footer-link">Services</a>
+      <a href="heritage.html">Heritage</a>
+      <a href="services.html">Our Services</a>
       <a href="process.html"   class="footer-link">Process</a>
     </div>
     <div>
@@ -201,11 +203,14 @@ function handleSubmit(e){
       <a href="contact.html" class="footer-link">Kent Office</a>
       <a href="#"            class="footer-link">Careers</a>
     </div>
-    <div>
-      <p class="t-label c-secondary" style="margin-bottom:20px">Legal</p>
-      <a href="#" class="footer-link">Privacy Policy</a>
-      <a href="#" class="footer-link">Terms of Service</a>
+      <div style="border-top:1px solid var(--outline-faint);margin-top:48px;padding:20px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+    <p class="t-body c-on-surf-var" style="font-size:0.8rem;margin:0;">&copy; 2025 Blatch &amp; Green. All rights reserved. Registered in England &amp; Wales.</p>
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;">
+      <a href="contact.html#" class="footer-link" style="font-size:0.8rem;">Privacy Policy</a>
+      <a href="contact.html#" class="footer-link" style="font-size:0.8rem;">Terms of Service</a>
+      <span style="font-size:0.8rem;color:var(--on-surf-var);">Built by <a href="https://www.marketingformymates.com" rel="dofollow" style="color:var(--secondary);text-decoration:none;">www.marketingformymates.com</a></span>
     </div>
+  </div>
   </div>
 </footer>
 
