@@ -372,6 +372,30 @@ hr.rule { border: none; border-top: 1px solid var(--outline-faint); }
 .footer-link { font-size: 16px; color: var(--on-surf-var); display: block; margin-bottom: 16px; transition: color var(--transition); }
 .footer-link:hover { color: var(--secondary); }
 
+/* ── Intro panel ──────────────────────────────────── */
+.intro-panel {
+  background: rgba(26,58,42,0.06);
+  border-left: 3px solid var(--secondary);
+  padding: 40px 48px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.intro-panel p:first-child {
+  font-family: 'Libre Caslon Text', serif;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  line-height: 1.65;
+  color: var(--secondary);
+  margin-bottom: 20px;
+}
+.intro-panel p:last-child {
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--secondary);
+  opacity: 0.85;
+  margin: 0;
+}
+
 /* ── Responsive ───────────────────────────────────── */
 @media (max-width: 1024px) {
   :root { --pad-x-desk: 48px; }
